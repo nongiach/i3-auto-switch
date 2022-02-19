@@ -2,8 +2,8 @@
 
 TLDR: Auto switch between multiple neovim/vim instance or terminal instance in i3.
 
-Sometimes, you forget in which workspace or which tab you your vim/neovim/emacs/vs/sublime is? 
-This module will focus your vim/neovim for you, and allows you to switch between all your currently opened vim/neovim instances with one keyboard shortcut.
+Sometimes, you forget in which workspace or which tab you your vim/neovim/emacs/vs/sublime/terminal is? 
+This module will focus your vim/neovim for you, and allows you to switch between all your currently opened editor instances with one keyboard shortcut.
 
 ## How to use
 
