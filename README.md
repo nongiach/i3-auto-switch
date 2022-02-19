@@ -16,7 +16,6 @@ Copy bash the below commands into your shell, that's it!
 
 ```shell
 cat <<\EOF | sudo tee /usr/bin/i3-auto-switch
-# the file name that will be used to store the currently focused vim id
 windows_title="$1"
 export DISPLAY=":0"
 CURRENT=$(xdotool getactivewindow)
