@@ -21,15 +21,17 @@ windows_title="$1"
 export DISPLAY=":0"
 CURRENT=$(xdotool getactivewindow)
 # find the next vim windows id, the one next to the id stored in /tmp/previous_vim
-NEXT=$(xdotool search --all --name "$windows_title" \
+xdotool search --all --name "[^]]$windows_title" getwindowname %@
+NEXT=$(xdotool search --all --name "[^]]$windows_title" \
   | sort -n \
   | grep -A 1 "$CURRENT" \
   | grep -v "$CURRENT")
 
 # if NEXT is empty, use the first matching windows id
-NEXT=$((echo $NEXT ; (xdotool search --all --name "$windows_title" | sort -n)) | grep -v '^$' | head -n1)
+NEXT=$((echo $NEXT ; (xdotool search --all --name "[^]]$windows_title" | sort -n)) | grep -v '^$' | head -n1)
 
 # focus the found windows id
+echo i3-msg [id="$NEXT"] focus
 i3-msg [id="$NEXT"] focus
 EOF
 
