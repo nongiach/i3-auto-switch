@@ -12,6 +12,8 @@ Of course, a vim best practice is to only have one instance, but we all know tha
 
 ## Install
 
+Copy bash the below commands into your shell, and it's installed.
+
 ```shell
 cat <<\EOF | sudo tee /usr/bin/i3-auto-switch
 # the file name that will be used to store the currently focused vim id
