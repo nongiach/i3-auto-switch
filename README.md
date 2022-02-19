@@ -2,7 +2,7 @@
 
 Auto switch between multiple neovim/vim instance or terminal instance in i3.
 
-Sometimes you forgot in which workspace or which tab you put your vim/neovim in? 
+Sometimes, you forget in which workspace or which tab you put your vim/neovim in? 
 This module will focus your vim/neovim for you, and allows you to switch between all your currently opened vim/neovim instances with one keyboard shortcut.
 
 ## How to use
@@ -45,3 +45,9 @@ bindsym $mod+o exec "DISPLAY=:0 bash -c '/usr/bin/i3-auto-switch vim'"
 - i3-auto-switch uses xdotool to find the ID of the currently focused vim.
 - i3-auto-switch uses xdotool to find the ID of all currently opened vim.
 - i3-auto-switch uses a combinaison grep/sort/head to define what is the next vim to be focused.
+
+Enjoy!
+
+---
+
+Powered By: [chaignc+cve-2017-5123@hexpresso.team](https://twitter.com/chaignc)
