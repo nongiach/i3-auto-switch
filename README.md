@@ -15,18 +15,17 @@ Of course, it's prefered to only have one vim instance, but we all know that it'
 ```shell
 cat <<\EOF | sudo tee /usr/bin/i3-auto-switch
 # the file name that will be used to store the currently focused vim id
-VARIABLE_PATH=~/.cache/i3-auto-vim-auto-switch-id-cache
+windows_title="$1"
+export DISPLAY=":0"
+CURRENT=$(xdotool getactivewindow)
 # find the next vim windows id, the one next to the id stored in /tmp/previous_vim
-NEXT=$(xdotool search --all --name "vim" \
+NEXT=$(xdotool search --all --name "$windows_title" \
   | sort -n \
-  | grep -A 1 -f "$VARIABLE_PATH" \
-  | grep -v -f "$VARIABLE_PATH")
+  | grep -A 1 "$CURRENT" \
+  | grep -v "$CURRENT")
 
-# if it's empty, use the first windows id
-NEXT=$((echo $NEXT ; (xdotool search --all --name "vim" | sort -n)) | grep -v '^$' | head -n1)
-
-# store the next id
-echo $NEXT  > "$VARIABLE_PATH"
+# if NEXT is empty, use the first matching windows id
+NEXT=$((echo $NEXT ; (xdotool search --all --name "$windows_title" | sort -n)) | grep -v '^$' | head -n1)
 
 # focus the found windows id
 i3-msg [id="$NEXT"] focus
@@ -38,5 +37,11 @@ sudo chmod +x /usr/bin/i3-auto-switch
 ## Add the keyboard shortcut to your ~/.config/i3/config
 
 ```i3
-bindsym $mod+o exec "DISPLAY=:0 bash -c /usr/bin/i3-auto-switch"
+bindsym $mod+o exec "DISPLAY=:0 bash -c '/usr/bin/i3-auto-switch vim'"
 ```
+
+## Techical details
+
+- i3-auto-switch uses xdotool to find the ID of the currently focused vim.
+- i3-auto-switch uses xdotool to find the ID of all currently opened vim.
+- i3-auto-switch uses a combinaison grep/sort/head to define what is the next vim to be focused.
