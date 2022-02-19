@@ -12,7 +12,7 @@ Of course, a vim best practice is to only have one instance, but we all know tha
 
 ## Install
 
-Copy bash the below commands into your shell, and it's installed.
+Copy bash the below commands into your shell, that's it!
 
 ```shell
 cat <<\EOF | sudo tee /usr/bin/i3-auto-switch
