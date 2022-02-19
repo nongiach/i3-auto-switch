@@ -50,4 +50,4 @@ Enjoy!
 
 ---
 
-Powered By: [chaignc+cve-2017-5123@hexpresso.team](https://twitter.com/chaignc)
+Powered By: [@chaignc](https://twitter.com/chaignc)
