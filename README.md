@@ -1,6 +1,6 @@
 # i3-auto-switch
 
-Auto switch between multiple neovim/vim instance or terminal instance in i3.
+TLDR: Auto switch between multiple neovim/vim instance or terminal instance in i3.
 
 Sometimes, you forget in which workspace or which tab you put your vim/neovim in? 
 This module will focus your vim/neovim for you, and allows you to switch between all your currently opened vim/neovim instances with one keyboard shortcut.
