@@ -2,13 +2,13 @@
 
 TLDR: Auto switch between multiple neovim/vim instance or terminal instance in i3.
 
-Sometimes, you forget in which workspace or which tab you put your vim/neovim in? 
+Sometimes, you forget in which workspace or which tab you your vim/neovim is? 
 This module will focus your vim/neovim for you, and allows you to switch between all your currently opened vim/neovim instances with one keyboard shortcut.
 
 ## How to use
 
 Type your `mod+o`, it will switch between all your opened vim instance in all workspaces.
-Of course, it's prefered to only have one vim instance, but we all know that it's not always the case...
+Of course, a vim best practice is to only have one instance, but we all know that it's not always the case...
 
 ## Install
 
