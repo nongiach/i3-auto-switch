@@ -48,7 +48,7 @@ This actually works for any application: emacs, firefox, terminal...
 Just update the application title pattern in the below i3 configuration.
 This one is how I switch between all my terminal instance.
 ```i3
-bindsym $mod+i exec "bash -c '/usr/bin/i3-auto-switch term'"
+bindsym $mod+i exec bash -c '/usr/bin/i3-auto-switch "Term ::"'
 ```
 
 ## Techical details
